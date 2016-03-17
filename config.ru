@@ -1,0 +1,3 @@
+require "./libre"
+
+run Cuba

@@ -1,2 +1,3 @@
 # libre
-cuba app example
+
+cuba app example showing the simple routing and templating capabilities.

@@ -1,0 +1,8 @@
+<h1>Ciudades</h1>
+<ul>
+  <% ciudades.each do |city_data| %>
+    <li>
+      <b><%= city_data["name"] %></b><small>(<%= city_data["province"] %>)</small>: <%= city_data["population"] %>
+    </li>
+  <% end %>
+</ul>
