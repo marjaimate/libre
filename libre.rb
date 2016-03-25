@@ -1,4 +1,5 @@
 require "yaml"
+require 'json'
 require "cuba"
 require "cuba/safe"
 require "cuba/render"
@@ -15,12 +16,12 @@ Cuba.define do
       ciudades = YAML.load_file("ciudades.yml")
       # Index Cities
       on root do
-        res.write view("ciudades", ciudades: ciudades.values)
+        res.write ciudades.to_json
       end
 
       # Show City
       on ":ciudad" do |ciudad|
-        res.write view("ciudad", ciudad: ciudades[ciudad])
+        res.write ciudades[ciudad].to_json
       end
     end
 
