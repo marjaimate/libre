@@ -3,7 +3,6 @@ require 'json'
 require "cuba"
 require "cuba/safe"
 require "cuba/render"
-require "erb"
 
 # Cuba Plugins
 Cuba.use Rack::Session::Cookie, :secret => "SoLongAndThanksForAllTheFish!"
